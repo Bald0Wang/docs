@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "C9 黑客松练功房",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -11,77 +11,50 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "C9 Hackathon",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "核心理念",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "hackathon/introduction",
+              "hackathon/unit-theory"
             ]
           },
           {
-            "group": "Customization",
+            "group": "持续 AI 赋能",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "hackathon/ai-mainline"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "三阶段培养路线",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "hackathon/curriculum-overview",
+              "hackathon/stage-1-prep",
+              "hackathon/stage-2-deep-dive",
+              "hackathon/stage-3-transformation"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "角色专项指南",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "hackathon/role-market",
+              "hackathon/role-product",
+              "hackathon/role-tech"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "实战执行与交付",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "hackathon/training-lab",
+              "hackathon/milestones",
+              "hackathon/mechanisms",
+              "hackathon/last-mile"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -90,33 +63,31 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Datawhale",
+        "href": "https://datawhale.org"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "进入魔搭社区",
+      "href": "https://modelscope.cn"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/datawhalechina"
     }
   }
 }

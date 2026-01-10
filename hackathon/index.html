@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="C9高校黑客松（Datawhale × 魔搭社区）教程页：方向、分工、流程、交付与评分，一页快速理解。"
+    />
+    <title>C9 黑客松教程｜Datawhale × 魔搭社区</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .table-wrap{
+        overflow: auto;
+        border: 2px solid var(--border);
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-sm);
+        background: rgba(0,0,0,.12);
+      }
+      [data-theme="light"] .table-wrap{
+        background: rgba(16,16,35,.03);
+      }
+      table.schedule{
+        width: 100%;
+        min-width: 980px;
+        border-collapse: collapse;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      table.schedule th,
+      table.schedule td{
+        border: 2px solid var(--border);
+        padding: 10px 10px;
+        vertical-align: top;
+        background: rgba(0,0,0,.12);
+      }
+      [data-theme="light"] table.schedule th,
+      [data-theme="light"] table.schedule td{
+        background: rgba(16,16,35,.03);
+      }
+      table.schedule th{
+        font-weight: 800;
+        position: sticky;
+        top: 0;
+        background: rgba(255,225,77,.12);
+      }
+      [data-theme="light"] table.schedule th{
+        background: rgba(255,225,77,.18);
+      }
+      .mono{
+        font-family: var(--mono);
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">C9</div>
+          <div class="brand__text">
+            <div class="brand__title">黑客松教程页</div>
+            <div class="brand__sub">Datawhale × 魔搭社区</div>
+          </div>
+        </div>
+
+        <div class="topbar__actions">
+          <button class="btn btn--ghost" id="toggleTheme" type="button" aria-label="切换主题">
+            <span aria-hidden="true">主题</span>
+          </button>
+          <button class="btn btn--primary" id="copySignup" type="button" data-copy="【报名链接占位】">
+            复制报名入口
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container shell">
+      <aside class="nav" aria-label="页面导航">
+        <div class="nav__title">目录</div>
+        <nav class="nav__links" id="toc">
+          <a class="nav__link" href="#hero">总览</a>
+          <a class="nav__link" href="#roles">三人最小战斗单元</a>
+          <a class="nav__link" href="#ai">贯穿式 AI 能力</a>
+          <a class="nav__link" href="#flow">三阶段路线图</a>
+          <a class="nav__link" href="#stages">阶段细节</a>
+          <a class="nav__link" href="#schedule">20 天学习排期</a>
+          <a class="nav__link" href="#deliverables">最终交付清单</a>
+          <a class="nav__link" href="#rubric">评分维度</a>
+          <a class="nav__link" href="#bridge">桥梁与人才对接</a>
+          <a class="nav__link" href="#faq">FAQ</a>
+        </nav>
+        <div class="nav__hint">
+          <div class="tag tag--cyan">Neubrutalism</div>
+          <div class="tag tag--magenta">Cyberpunk</div>
+        </div>
+      </aside>
+
+      <main id="main" class="main">
+        <section id="hero" class="card hero">
+          <div class="hero__left">
+            <div class="kicker">课程总览 · <span class="mono">2026/01/19–2026/02/07</span></div>
+            <h1 class="hero__title">
+              把黑客松当作同学们的<strong>练功房</strong>：用 20 天完成一次可投递的职业化交付
+            </h1>
+            <p class="hero__desc">
+              这是一个<strong>压缩排期</strong>的训练营：以“三人最小战斗单元（市场/产品/技术）”协作，产出<strong>可演示 Demo</strong>与<strong>可复现文档</strong>，并沉淀成企业能理解的项目证据。
+            </p>
+            <div class="hero__cta">
+              <button class="btn btn--accent" id="scrollFlow" type="button">直接看三阶段路线图</button>
+              <button class="btn btn--ghost" id="copyRepo" type="button" data-copy="【项目仓库占位】">
+                复制模板仓库
+              </button>
+            </div>
+          </div>
+
+          <div class="hero__right">
+            <div class="stat-grid" role="list">
+              <div class="stat" role="listitem">
+                <div class="stat__num">3</div>
+                <div class="stat__label">最小战斗单元（市场/产品/技术）</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__num">20</div>
+                <div class="stat__label">天压缩排期（01/19–02/07）</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__num">3</div>
+                <div class="stat__label">阶段（对齐定题 / MVP 构建 / 职业化交付）</div>
+              </div>
+              <div class="stat" role="listitem">
+                <div class="stat__num">02/07</div>
+                <div class="stat__label">Demo Day（路演与验收）</div>
+              </div>
+            </div>
+
+            <div class="note">
+              <div class="note__title">快速记住一句话</div>
+              <div class="note__body">
+                用<strong>市场证据</strong>定方向，用<strong>产品原型</strong>定体验，用<strong>技术交付</strong>做出可运行 Demo，并用<strong>验收与评测</strong>证明有效。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="why" class="grid" aria-label="你将获得什么">
+          <article class="card">
+            <h2 class="h2">你将获得的能力（压缩版）</h2>
+            <ul class="list">
+              <li><strong>问题定义</strong>：把“想做”转成可验证的用户问题与场景。</li>
+              <li><strong>证据与验证</strong>：用竞品/访谈/数据支撑结论，而不是凭感觉拍板。</li>
+              <li><strong>协作与互锁</strong>：市场→产品→技术的输入输出对齐，决策可追溯。</li>
+              <li><strong>职业化交付</strong>：Demo 可演示、文档可复现、路演可讲清。</li>
+              <li><strong>AI 协作力</strong>：会用、会问、会评（反幻觉/证据链/回归）。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2 class="h2">为什么 20 天也能“练出成果”</h2>
+            <div class="pill-row">
+              <span class="pill">强约束排期</span>
+              <span class="pill">跨学科协作</span>
+              <span class="pill">互锁交付</span>
+              <span class="pill">可复现证据</span>
+              <span class="pill">路演验收</span>
+            </div>
+            <p class="muted">
+              排期的关键不是“学很多”，而是<strong>把一件事做成</strong>：每两天一个检查点，持续沉淀 Prompt、文档与决策记录，确保最终能演示、能复现、能讲述。
+            </p>
+          </article>
+        </section>
+
+        <section id="roles" class="card">
+          <div class="section-head">
+            <h2 class="h2">构建人才培养方向：三人最小战斗单元</h2>
+            <div class="section-head__right">
+              <div class="tag tag--yellow">每组基础 3 人</div>
+              <div class="tag tag--purple">可扩展为 4-6 人</div>
+            </div>
+          </div>
+
+          <div class="role-grid">
+            <article class="role role--cyan">
+              <div class="role__top">
+                <h3 class="h3">市场方向（文科/商科更佳）</h3>
+                <div class="role__badge">证据链</div>
+              </div>
+              <ul class="list">
+                <li><strong>问题定义</strong>：把方向讲成一句话价值（UVP）+ 证据链。</li>
+                <li><strong>竞品与替代</strong>：用矩阵说明差异化与可赢点。</li>
+                <li><strong>验证与增长</strong>：最小实验验证需求强度与使用意愿。</li>
+                <li><strong>验收体验</strong>：用 UAT 测“价值偏差/体验断点”。</li>
+              </ul>
+              <div class="deliver">
+                <div class="deliver__title">本角色交付物</div>
+                <div class="deliver__items">
+                  <span class="chip">1页问题定义</span>
+                  <span class="chip">竞品矩阵</span>
+                  <span class="chip">证据链（访谈/数据）</span>
+                  <span class="chip">UAT 验收报告</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="role role--magenta">
+              <div class="role__top">
+                <h3 class="h3">产品方向（设计/交互更佳）</h3>
+                <div class="role__badge">可用与可信</div>
+              </div>
+              <ul class="list">
+                <li><strong>原型驱动开发</strong>：定义核心流程与关键状态（含异常/空状态）。</li>
+                <li><strong>DRD 交互说明</strong>：把“怎么用”写清楚，保证可落地。</li>
+                <li><strong>AI 交互规范</strong>：输出格式、引用展示、拒答与安全边界。</li>
+                <li><strong>可用性验证</strong>：脚本化测试，按数据迭代交互。</li>
+              </ul>
+              <div class="deliver">
+                <div class="deliver__title">本角色交付物</div>
+                <div class="deliver__items">
+                  <span class="chip">原型（含异常流）</span>
+                  <span class="chip">DRD（交互说明）</span>
+                  <span class="chip">Prompt/交互规范</span>
+                  <span class="chip">可用性测试记录</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="role role--yellow">
+              <div class="role__top">
+                <h3 class="h3">技术方向（理工科更佳）</h3>
+                <div class="role__badge">可复现交付</div>
+              </div>
+              <ul class="list">
+                <li><strong>可行性与选型</strong>：模型/接口/成本/风险评估（敢于砍）。</li>
+                <li><strong>端到端闭环</strong>：先跑通最小链路，再做体验与稳定性。</li>
+                <li><strong>质量与评测</strong>：最小评测用例、回归与稳定性检查。</li>
+                <li><strong>部署与复现</strong>：把“能跑”变成“别人也能跑”。</li>
+              </ul>
+              <div class="deliver">
+                <div class="deliver__title">本角色交付物</div>
+                <div class="deliver__items">
+                  <span class="chip">可运行仓库</span>
+                  <span class="chip">可访问 Demo</span>
+                  <span class="chip">架构/API 说明</span>
+                  <span class="chip">稳定性结论</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="callout">
+            <div class="callout__title">最关键的协作约定（建议写进团队公约）</div>
+            <ul class="list list--compact">
+              <li><strong>每天固定同步</strong>：10-15 分钟站会，产出“今日目标/阻塞/需要帮助”。</li>
+              <li><strong>决策可追溯</strong>：重要取舍写在文档里，避免反复争论。</li>
+              <li><strong>以交付为中心</strong>：所有工作都服务于“可演示 Demo + 可复现 README + 可讲述路演”。</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="ai" class="card">
+          <div class="section-head">
+            <h2 class="h2">贯穿式 AI 能力（全员）</h2>
+            <div class="section-head__right">
+              <div class="tag tag--cyan">会用</div>
+              <div class="tag tag--magenta">会问</div>
+              <div class="tag tag--yellow">会评</div>
+            </div>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3 class="h3">能力层级（压缩版）</h3>
+              <ul class="list list--compact">
+                <li><strong>会用</strong>：总结、改写、对比方案、生成草稿，提高效率。</li>
+                <li><strong>会问</strong>：提示词结构（角色/目标/约束/格式/示例）+ 迭代。</li>
+                <li><strong>会评</strong>：反幻觉（伪引用/虚构数据）+ 证据链 + 对照测试。</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="h3">固定制度（建议写进营规）</h3>
+              <ul class="list list--compact">
+                <li><strong>AI Daily</strong>：10-15 分钟同步“今天用的 Prompt/效果/可复用点”。</li>
+                <li><strong>Prompt Library</strong>：团队共享模板（研究/交互/评测/文案）。</li>
+                <li><strong>AI Output QA</strong>：每 2 天抽查 1 份 AI 输出做证据链检查。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="flow" class="card">
+          <div class="section-head">
+            <h2 class="h2">三阶段路线图（压缩排期）</h2>
+            <div class="section-head__right">
+              <div class="tag tag--yellow">阶段A 01/19–01/21</div>
+              <div class="tag tag--purple">阶段B 01/22–01/31</div>
+              <div class="tag tag--cyan">阶段C 02/01–02/07</div>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-badge">A</div>
+              <div class="tl-body">
+                <div class="tl-title">对齐与定题（01/19–01/21）</div>
+                <div class="tl-desc">
+                  组队与工具统一 → 建立证据链与互锁规则 → 需求冻结（Checkpoint1）：题目、受众、价值与 MVP 边界明确。
+                </div>
+                <div class="tl-tags">
+                  <span class="chip">1页问题定义</span>
+                  <span class="chip">核心流程原型</span>
+                  <span class="chip">可行性评估 v0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-badge">B</div>
+              <div class="tl-body">
+                <div class="tl-title">MVP 构建（01/22–01/31）</div>
+                <div class="tl-desc">
+                  以“端到端最小闭环”为核心：先跑通，再迭代体验；沉淀 DRD、Prompt 规范与最小评测/验收用例（Checkpoint2：中期评审）。
+                </div>
+                <div class="tl-tags">
+                  <span class="chip">可运行 Demo</span>
+                  <span class="chip">DRD v1</span>
+                  <span class="chip">最小评测/回归</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <div class="tl-badge">C</div>
+              <div class="tl-body">
+                <div class="tl-title">打磨与职业化交付（02/01–02/07）</div>
+                <div class="tl-desc">
+                  体验、稳定性与可信度收口；完成路演材料、最终验收与可投递的项目证据（Checkpoint3：02/06 定稿，02/07 Demo Day）。
+                </div>
+                <div class="tl-tags">
+                  <span class="chip">路演PPT/脚本</span>
+                  <span class="chip">UAT验收报告</span>
+                  <span class="chip">开源级 README</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="two-col">
+            <div>
+              <h3 class="h3">阶段内最小交付（每天都要能对齐）</h3>
+              <ul class="list list--compact">
+                <li><strong>市场</strong>：证据链更新（新增数据/访谈/引用）+ 结论变化。</li>
+                <li><strong>产品</strong>：原型/DRD 版本更新（新增状态/异常流/文案）。</li>
+                <li><strong>技术</strong>：可运行链路更新（稳定性/复现步骤/风险变化）。</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="h3">强制机制（不做就会崩）</h3>
+              <ul class="list list--compact">
+                <li><strong>互锁交付</strong>：产品没有原型/DRD，技术不得开工；市场没有证据，产品不得定稿。</li>
+                <li><strong>AI 输出质检</strong>：每 2 天一次证据链检查（反幻觉/反伪引用）。</li>
+                <li><strong>可复现优先</strong>：别人跑不起来的 Demo，等于没交付。</li>
+                <li><strong>演示优先</strong>：演示只走最稳主流程，录屏备份防翻车。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="stages" class="card">
+          <div class="section-head">
+            <h2 class="h2">阶段细节：每阶段该学什么、交付什么</h2>
+            <div class="section-head__right">
+              <div class="tag tag--yellow">装备期</div>
+              <div class="tag tag--purple">深耕期</div>
+              <div class="tag tag--cyan">蜕变期</div>
+            </div>
+          </div>
+
+          <p class="muted">
+            下述内容来自课程大纲的“三阶段技能树”，已按 20 天排期做了压缩：只保留能直接影响<strong>交付质量</strong>的关键能力点。
+          </p>
+
+          <div class="grid grid--3">
+            <article class="mini">
+              <div class="mini__title">阶段A：装备期（01/19–01/21）</div>
+              <div class="mini__desc">目标：对齐认知、统一工具、完成定题与需求冻结（Checkpoint1）。</div>
+              <div class="divider"></div>
+              <ul class="list list--compact">
+                <li><strong>全员</strong>：AI 认知对齐；协作工具链；MVP 砍需求；站会与决策记录。</li>
+                <li><strong>市场</strong>：痛点挖掘（5W1H/JTBD）→ 竞品/替代矩阵 → 证据链（可引用数据/访谈摘录）。</li>
+                <li><strong>产品</strong>：用户旅程图 v0 → 核心流程低保真 → 异常/空状态清单 → AI 交互输入输出约束。</li>
+                <li><strong>技术</strong>：Git/PR 规范 → 选型与成本假设 → 最小端到端链路可行性评估。</li>
+              </ul>
+              <div class="deliver">
+                <div class="deliver__title">阶段交付物（最少）</div>
+                <div class="deliver__items">
+                  <span class="chip">1页问题定义</span>
+                  <span class="chip">竞品矩阵</span>
+                  <span class="chip">核心流程原型</span>
+                  <span class="chip">可行性评估 v0</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="mini">
+              <div class="mini__title">阶段B：深耕期（01/22–01/31）</div>
+              <div class="mini__desc">目标：把 Demo 从“能跑”做成“可用可验收”，形成评测/回归与中期评审（Checkpoint2）。</div>
+              <div class="divider"></div>
+              <ul class="list list--compact">
+                <li><strong>全员</strong>：看板推进；数据思维（可解释指标）；AI 协作流程化（提示词库/质检）。</li>
+                <li><strong>市场</strong>：定量/定性补充（最小样本）→ 商业验证最小实验 → 结论与风险清单可审计。</li>
+                <li><strong>产品</strong>：DRD v1（状态机/异常流/文案策略）→ 可用性测试脚本 → 可信体验（引用/可追溯/拒答）。</li>
+                <li><strong>技术</strong>：先闭环再优化；最小评测用例表与回归；日志/错误处理；可复现与可访问性提升。</li>
+              </ul>
+              <div class="deliver">
+                <div class="deliver__title">阶段交付物（最少）</div>
+                <div class="deliver__items">
+                  <span class="chip">可运行 Demo v1</span>
+                  <span class="chip">DRD v1</span>
+                  <span class="chip">Prompt/交互规范 v1</span>
+                  <span class="chip">最小评测/回归</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="mini">
+              <div class="mini__title">阶段C：蜕变期（02/01–02/07）</div>
+              <div class="mini__desc">目标：按企业标准收口，职业化包装，完成最终验收与路演（Checkpoint3 / Demo Day）。</div>
+              <div class="divider"></div>
+              <ul class="list list--compact">
+                <li><strong>全员</strong>：合规与边界；结构化表达；复盘（What/So what/Now what）。</li>
+                <li><strong>市场</strong>：路演故事线（问题→方案→证据→风险→下一步）→ UAT 验收与改进建议。</li>
+                <li><strong>产品</strong>：Case Study（发现→权衡→验证）→ 像素级/一致性验收 → 可发布的作品集材料。</li>
+                <li><strong>技术</strong>：README/部署指南/架构说明定稿；回归与稳定性清单；隐私脱敏与依赖合规说明。</li>
+              </ul>
+              <div class="deliver">
+                <div class="deliver__title">阶段交付物（最少）</div>
+                <div class="deliver__items">
+                  <span class="chip">路演PPT/脚本</span>
+                  <span class="chip">UAT验收报告</span>
+                  <span class="chip">开源级 README</span>
+                  <span class="chip">可投递证据包</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="schedule" class="card">
+          <div class="section-head">
+            <h2 class="h2">20 天学习排期安排表（01/19–02/07）</h2>
+            <button
+              class="btn btn--ghost"
+              id="copyChecklist"
+              type="button"
+              data-copy="学习周期：2026/01/19–2026/02/07（20天）。阶段A：对齐与定题（01/19–01/21）；阶段B：MVP构建（01/22–01/31）；阶段C：打磨与职业化交付（02/01–02/07）。"
+            >
+              复制关键信息
+            </button>
+          </div>
+          <p class="muted">
+            默认每天 <strong>2–3 小时</strong>（可按学校节奏调整），并执行 <strong>AI Daily</strong>（10–15 分钟同步当天 Prompt 与结论）。
+          </p>
+
+          <div class="table-wrap" role="region" aria-label="学习排期表（可横向滚动）" tabindex="0">
+            <table class="schedule">
+              <thead>
+                <tr>
+                  <th>日期</th>
+                  <th>模块主题</th>
+                  <th>全员共学（30–45min）</th>
+                  <th>市场方向（任务/交付）</th>
+                  <th>产品方向（任务/交付）</th>
+                  <th>技术方向（任务/交付）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">01/19</td>
+                  <td>Kickoff & 规则</td>
+                  <td>目标/互锁机制/工具统一</td>
+                  <td>选题池与初步痛点列表</td>
+                  <td>用户/场景假设与触点草图</td>
+                  <td>协作规范（分支/PR）与脚手架准备</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/20</td>
+                  <td>证据链入门</td>
+                  <td>证据链与反幻觉</td>
+                  <td>竞品/替代方案矩阵 v0</td>
+                  <td>用户旅程图 v0</td>
+                  <td>模型/接口选型与成本假设 v0</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/21</td>
+                  <td>定题冻结（Checkpoint1）</td>
+                  <td>需求冻结与砍需求</td>
+                  <td><strong>1页问题定义</strong>（含证据）</td>
+                  <td><strong>核心流程低保真原型</strong>（含关键状态）</td>
+                  <td><strong>可行性评估 v0</strong>（风险/成本/工期）</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/22</td>
+                  <td>MVP 切片</td>
+                  <td>MVP 切片与验收标准</td>
+                  <td>MoSCoW 需求优先级表</td>
+                  <td>DRD 框架（页面/状态/文案策略）</td>
+                  <td>架构草图 + 数据流（最小闭环）</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/23</td>
+                  <td>AI 交互基础</td>
+                  <td>Prompt 结构化输出</td>
+                  <td>访谈提纲 + 5位目标用户清单</td>
+                  <td>Prompt/交互模板 v0（输入/输出格式）</td>
+                  <td>API 接入方案 v0（超时/重试/日志）</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/24</td>
+                  <td>可用性基础</td>
+                  <td>可用性测试怎么做</td>
+                  <td>访谈纪要模板 + 2次访谈</td>
+                  <td>原型迭代 v1（异常流补齐）</td>
+                  <td>Demo 跑通 v0（可本地复现）</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/25</td>
+                  <td>评测与验收</td>
+                  <td>用例与回归概念</td>
+                  <td>UAT 用例草案 v0</td>
+                  <td>评测场景清单（成功/失败）</td>
+                  <td>最小评测用例表 v0</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/26</td>
+                  <td>Sprint 1 开始</td>
+                  <td>看板与站会</td>
+                  <td>用户反馈初结论（3条）</td>
+                  <td>高保真关键页面 v0</td>
+                  <td>核心链路实现（1条闭环）</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/27</td>
+                  <td>Sprint 1</td>
+                  <td>成本与性能意识</td>
+                  <td>价值主张（UVP）一句话</td>
+                  <td>AI 回复风格与拒答策略 v0</td>
+                  <td>日志/错误处理与基础监控点</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/28</td>
+                  <td>Sprint 1</td>
+                  <td>可信体验</td>
+                  <td>风险清单（合规/隐私/误用）</td>
+                  <td>引用/可追溯体验设计 v0</td>
+                  <td>提示注入基础防护 v0</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/29</td>
+                  <td>Sprint 1 Checkpoint2</td>
+                  <td>中期评审</td>
+                  <td>商业验证计划（最小实验）</td>
+                  <td>DRD v1（含状态机/异常）</td>
+                  <td>Demo v1（他人可跑/可访问）</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/30</td>
+                  <td>Sprint 2</td>
+                  <td>数据驱动</td>
+                  <td>增长实验 v0（渠道/指标）</td>
+                  <td>可用性测试脚本 v1</td>
+                  <td>性能/成本优化点清单 v0</td>
+                </tr>
+                <tr>
+                  <td class="mono">01/31</td>
+                  <td>Sprint 2</td>
+                  <td>复盘与调整</td>
+                  <td>访谈/问卷补充（最少10份）</td>
+                  <td>原型 v2（按数据改动）</td>
+                  <td>结构整理与配置化（可维护）</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/01</td>
+                  <td>打磨期开始</td>
+                  <td>路演框架</td>
+                  <td>路演故事线（问题→方案→价值）</td>
+                  <td>Case Study 结构（发现→权衡→验证）</td>
+                  <td>部署/演示方案 v1（稳定可用）</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/02</td>
+                  <td>体验打磨</td>
+                  <td>交付标准</td>
+                  <td>UAT 用例 v1（含体验断点）</td>
+                  <td>文案与引导（新手/空状态）</td>
+                  <td>Bug 清单与修复优先级（P0/P1）</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/03</td>
+                  <td>可信与合规</td>
+                  <td>合规清单</td>
+                  <td>免责声明/边界说明草案</td>
+                  <td>敏感内容/拒答与转人工策略</td>
+                  <td>隐私脱敏与日志策略收口</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/04</td>
+                  <td>作品包装</td>
+                  <td>展示怎么做</td>
+                  <td>商业验证结果页（数据/结论）</td>
+                  <td>作品集页面/截图与说明</td>
+                  <td>README/部署说明（可复现、脱敏）</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/05</td>
+                  <td>最终联调</td>
+                  <td>演示走查</td>
+                  <td>最终验收准备（UAT）</td>
+                  <td>交互一致性与验收</td>
+                  <td>回归测试与稳定性检查清单</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/06</td>
+                  <td>Final Checkpoint3</td>
+                  <td>路演彩排</td>
+                  <td><strong>UAT验收报告</strong>（结论+问题）</td>
+                  <td><strong>DRD/Case Study 定稿</strong></td>
+                  <td><strong>Demo/仓库定稿</strong>（文档齐）</td>
+                </tr>
+                <tr>
+                  <td class="mono">02/07</td>
+                  <td>Demo Day & 复盘</td>
+                  <td>复盘模板</td>
+                  <td>行业洞察/复盘要点（可发布）</td>
+                  <td>作品集发布与复盘（可发布）</td>
+                  <td>技术决策记录与复盘（可发布）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="deliverables" class="card">
+          <div class="section-head">
+            <h2 class="h2">最终交付清单（02/07 前必须齐）</h2>
+            <button
+              class="btn btn--ghost"
+              id="copyAllLinks"
+              type="button"
+              data-copy="团队级：路演PPT+演示脚本；可访问Demo或可复现运行方式；统一README（背景/功能/使用/边界/合规）。市场：1页问题定义+竞品矩阵+UAT验收报告。产品：原型（含异常流/空状态）+DRD+Prompt/交互规范（含回归表）。技术：可运行项目+部署说明（脱敏）+架构/API说明+稳定性/成本关键结论。"
+            >
+              复制最终交付清单
+            </button>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3 class="h3">团队级（统一交付）</h3>
+              <ul class="list list--compact">
+                <li><strong>路演</strong>：Pitch Deck + 3–5 分钟演示脚本。</li>
+                <li><strong>Demo</strong>：可访问链接或可复现运行方式（说明清晰）。</li>
+                <li><strong>统一 README</strong>：背景/功能/使用/边界/合规说明。</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="h3">三方向最少交付</h3>
+              <ul class="list list--compact">
+                <li><strong>市场</strong>：问题定义 + 竞品矩阵 + UAT 验收报告。</li>
+                <li><strong>产品</strong>：原型（异常流）+ DRD + Prompt/交互规范（回归表）。</li>
+                <li><strong>技术</strong>：可运行项目 + 部署/运行说明（脱敏）+ 架构/API 说明。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="rubric" class="grid">
+          <article class="card">
+            <h2 class="h2">评分维度（可作为评委表）</h2>
+            <div class="rubric">
+              <div class="rubric__row">
+                <div class="rubric__k">价值与问题定义</div>
+                <div class="rubric__v">是否抓住真实痛点？目标用户是否清晰？</div>
+              </div>
+              <div class="rubric__row">
+                <div class="rubric__k">创新与差异化</div>
+                <div class="rubric__v">相对竞品/常规方案，有何独特优势？</div>
+              </div>
+              <div class="rubric__row">
+                <div class="rubric__k">产品体验</div>
+                <div class="rubric__v">交互顺畅吗？演示流程是否抓人？</div>
+              </div>
+              <div class="rubric__row">
+                <div class="rubric__k">技术可行性与完成度</div>
+                <div class="rubric__v">端到端是否跑通？稳定性与复现如何？</div>
+              </div>
+              <div class="rubric__row">
+                <div class="rubric__k">证据与验证</div>
+                <div class="rubric__v">有没有数据/访谈/用户反馈支撑结论？</div>
+              </div>
+              <div class="rubric__row">
+                <div class="rubric__k">表达与协作</div>
+                <div class="rubric__v">叙事清晰、团队分工合理、答辩应对到位。</div>
+              </div>
+              <div class="rubric__row">
+                <div class="rubric__k">AI 协作力（加分）</div>
+                <div class="rubric__v">是否沉淀 Prompt/评测/回归？是否具备反幻觉与合规意识？</div>
+              </div>
+            </div>
+            <p class="muted">
+              你可以把评分做成“红黄绿灯”：每项给出<strong>证据</strong>（截图/日志/数据/链接），比口头描述更有说服力。
+            </p>
+          </article>
+
+          <article class="card">
+            <h2 class="h2">题目建议（更容易在 20 天做成）</h2>
+            <div class="pill-row">
+              <span class="pill">工具型助手</span>
+              <span class="pill">科研/学习助手</span>
+              <span class="pill">内容生成与审核</span>
+              <span class="pill">校园服务/公共服务</span>
+              <span class="pill">合规/安全提示</span>
+              <span class="pill">企业知识库问答</span>
+            </div>
+            <p class="muted">
+              20 天更适合从“工具型/助手型 MVP”起步：一个清晰用户 + 一个核心场景 + 一条端到端流程 + 可解释的验证证据。
+            </p>
+          </article>
+        </section>
+
+        <section id="bridge" class="card">
+          <h2 class="h2">桥梁与人才对接：把“参赛经历”变成企业能理解的证据</h2>
+          <p class="muted">
+            Datawhale 与魔搭社区作为桥梁，将“课程/项目/评价/岗位”打通：企业看到的不是你说了什么，而是你交付了什么、如何做成、证据是什么、下一步怎么迭代。
+          </p>
+          <div class="divider"></div>
+          <div class="map">
+            <div class="map__node map__node--left">
+              <div class="map__title">高校</div>
+              <div class="map__desc">人才供给、学术资源、组织动员</div>
+            </div>
+            <div class="map__node map__node--mid">
+              <div class="map__title">Datawhale × 魔搭</div>
+              <div class="map__desc">排期、模板、导师、评审、传播、对接</div>
+            </div>
+            <div class="map__node map__node--right">
+              <div class="map__title">企业</div>
+              <div class="map__desc">真实需求、场景、实习/岗位承接</div>
+            </div>
+          </div>
+          <p class="muted">
+            最终交付会被转化为“能力证据”：调研证据、交互与文档、可复现 Demo、评测与验收、路演表达与复盘。
+          </p>
+        </section>
+
+        <section id="faq" class="card">
+          <h2 class="h2">FAQ（常见疑问）</h2>
+
+          <div class="accordion" data-accordion>
+            <button class="acc__item" type="button" aria-expanded="false">
+              <span class="acc__q">我们不是技术强队，能做吗？</span>
+              <span class="acc__icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="acc__panel" hidden>
+              <p>
+                可以。三角分工的价值就在于：<strong>方向与体验</strong>同样能决定胜负。技术上先把端到端链路跑通，
+                再迭代体验与稳定性，优先保证 Demo 可演示、可复现。
+              </p>
+            </div>
+
+            <button class="acc__item" type="button" aria-expanded="false">
+              <span class="acc__q">什么算“最低可交付的 MVP”？</span>
+              <span class="acc__icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="acc__panel" hidden>
+              <p>
+                具备<strong>一个清晰用户</strong>、<strong>一个核心场景</strong>、<strong>一条端到端流程</strong>、以及<strong>可验证的结果</strong>（哪怕是小规模）。
+                MVP 的目标不是“功能多”，而是“能证明这条路可行”。
+              </p>
+            </div>
+
+            <button class="acc__item" type="button" aria-expanded="false">
+              <span class="acc__q">路演最容易踩的坑是什么？</span>
+              <span class="acc__icon" aria-hidden="true">＋</span>
+            </button>
+            <div class="acc__panel" hidden>
+              <ul class="list list--compact">
+                <li><strong>堆功能不讲价值</strong>：先讲痛点与证据，再展示功能。</li>
+                <li><strong>演示不稳定</strong>：准备录屏备份，Demo 只走最稳的主流程。</li>
+                <li><strong>缺少验证</strong>：至少给出 3 条用户反馈或 1 个可解释指标。</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer__left">
+            <div class="footer__title">C9 黑客松（Datawhale × 魔搭社区）</div>
+            <div class="footer__desc">把参赛过程变成可被企业理解与认可的能力证据。</div>
+          </div>
+          <div class="footer__right">
+            <button class="btn btn--ghost" id="backTop" type="button">回到顶部</button>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
