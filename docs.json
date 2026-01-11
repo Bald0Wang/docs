@@ -17,6 +17,8 @@
             "group": "核心理念",
             "pages": [
               "hackathon/introduction",
+              "hackathon/challenge-intro",
+              "hackathon/why-three-roles",
               "hackathon/unit-theory"
             ]
           },
@@ -27,7 +29,7 @@
             ]
           },
           {
-            "group": "三阶段培养路线",
+            "group": "里程碑检查点",
             "pages": [
               "hackathon/curriculum-overview",
               "hackathon/stage-1-prep",
